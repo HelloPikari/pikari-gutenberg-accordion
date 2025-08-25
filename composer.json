@@ -1,7 +1,6 @@
 {
 	"name": "pikari-inc/pikari-gutenberg-accordion",
 	"description": "A Wordpress Gutenberg Accordion/Toggle block",
-	"version": "1.0.0",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
 	"authors": [
