@@ -1,0 +1,20 @@
+/**
+ * Accordion block styles
+ */
+.wp-block-pikari-gutenberg-accordion {
+	// CSS Variables for customization
+	--pikari-gutenberg-accordion-icon-size: 1.25em;
+	--pikari-gutenberg-accordion-icon-rotation: 180deg;
+	--pikari-gutenberg-accordion-icon-space: 0.5em;
+	--pikari-gutenberg-accordion-transition-duration: 0.3s;
+	--pikari-gutenberg-accordion-transition-easing: ease-in-out;
+	--pikari-gutenberg-accordion-icon-color: currentColor;
+	--pikari-gutenberg-accordion-hover-opacity: 0.8;
+}
+
+// FAQ Style variation
+.wp-block-pikari-gutenberg-accordion.is-style-faq {
+	.pikari-gutenberg-accordion-heading {
+		font-weight: 600;
+	}
+}

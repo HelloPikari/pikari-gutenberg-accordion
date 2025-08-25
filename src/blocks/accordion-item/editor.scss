@@ -1,0 +1,11 @@
+/**
+ * Accordion item editor styles
+ */
+.wp-block-pikari-gutenberg-accordion-item {
+	.wp-block-heading,
+	.wp-block-post-title {
+		[data-rich-text-placeholder] {
+			flex-grow: 1;
+		}
+	}
+}
