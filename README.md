@@ -18,28 +18,30 @@ Pikari Gutenberg Accordion provides a modern, accessible accordion block for the
 
 ## Requirements
 
-- WordPress 6.0 or higher
-- PHP 8.2 or higher
+- WordPress 6.8 or higher
+- PHP 8.3 or higher
 - Modern browser with JavaScript enabled
 
 ## Installation
 
 ### From WordPress Admin
 
-1. Download the plugin ZIP file from the releases page
+1. Download the plugin ZIP file from the [releases page](../../releases)
 2. Navigate to Plugins → Add New in your WordPress admin
 3. Click "Upload Plugin" and select the ZIP file
 4. Click "Install Now" and then "Activate"
 
-### Manual Installation
+### Via Composer
 
 ```bash
-# Navigate to your WordPress plugins directory
-cd wp-content/plugins/
-
-# Clone or download the plugin
-# Then activate through WordPress admin
+composer require pikari/accordion
 ```
+
+### Manual Installation
+
+1. Download the source code from the [releases page](../../releases)
+2. Extract to your WordPress plugins directory: `wp-content/plugins/pikari-accordion/`
+3. Activate through WordPress admin
 
 ## Usage
 
@@ -199,13 +201,51 @@ npm run plugin-zip
 - `npm run playground` - Launch WordPress Playground for testing
 - `npm run plugin-zip` - Create distributable plugin ZIP file
 
+## Documentation
+
+### For Users
+
+- [Installation and Usage](#installation) - Getting started guide
+- [Customization](#customization) - Styling and configuration options
+- [Accessibility](#accessibility) - Accessibility features and compliance
+
+### For Developers
+
+- **[Development Workflow](docs/development-workflow.md)** - Complete development setup and workflow
+- **[Release Management](docs/releases.md)** - How releases work and how to create them
+- [Contributing Guidelines](#contributing) - How to contribute to this project
+
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+We welcome contributions! Please follow our development workflow:
+
+1. **Read the guides**: Start with [Development Workflow](docs/development-workflow.md)
+2. **Fork the repository** and create a feature branch
+3. **Follow coding standards**: Run `npm run lint:all` before committing
+4. **Add proper labels**: Label your PRs for automated changelog generation
+5. **Submit a Pull Request**: Include a clear description of changes
+
+### Quick Start for Contributors
+
+```bash
+# Fork and clone the repository
+git clone https://github.com/your-username/pikari-accordion.git
+cd pikari-accordion
+
+# Install dependencies
+npm install && composer install
+
+# Create feature branch
+git checkout -b feature/your-feature-name
+
+# Start development
+npm start
+
+# Test your changes
+npm run playground
+```
+
+See [Development Workflow](docs/development-workflow.md) for complete setup instructions.
 
 ## Browser Support
 
@@ -226,6 +266,20 @@ GPL-2.0-or-later
 - Email: development@pikari.io
 - Homepage: <https://pikari.io>
 
-## Changelog
+## Releases
 
-See [CHANGELOG.md](CHANGELOG.md) for a list of changes.
+This project uses automated release management:
+
+- **Latest Release**: See [Releases](../../releases) for downloadable versions
+- **Release Notes**: Automatically generated from pull request labels and titles
+- **Changelog**: See [CHANGELOG.md](CHANGELOG.md) for version history
+- **Creating Releases**: See [Release Management Guide](docs/releases.md) for maintainers
+
+### Release Process
+
+1. **Development** → Pull requests with proper labels
+2. **Auto-Draft** → Release notes automatically generated
+3. **Review & Publish** → Maintainer publishes when ready
+4. **Distribution** → ZIP file automatically built and attached
+
+For detailed information, see our [Release Management Guide](docs/releases.md).

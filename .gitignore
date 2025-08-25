@@ -39,6 +39,9 @@ coverage/
 *.zip
 *.tar.gz
 
+# Scripts (obsolete release scripts)
+bin/
+
 # Temporary files
 *.tmp
 *.temp

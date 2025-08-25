@@ -6,7 +6,8 @@
 			"Bash(npm run playground:*)",
 			"WebFetch(domain:raw.githubusercontent.com)",
 			"WebFetch(domain:github.com)",
-			"Bash(npm run build:*)"
+			"Bash(npm run build:*)",
+			"Bash(find:*)"
 		],
 		"deny": [],
 		"ask": []

@@ -471,47 +471,47 @@ Always use "Custom" query settings:
 
 ## Release Process
 
-### Automated Release via bin/release.sh
+This project uses **Release Drafter** for automated release management. No manual scripts are required.
 
-When preparing a new release, use the automated release script:
+### Modern Release Workflow
 
-```bash
-# Ensure all changes are committed and linted
-git status  # Should be clean
-npm run lint:all  # Must pass
+**For Development:**
 
-# Run the release script
-./bin/release.sh
-```
+1. Create feature branches with descriptive names (`feature/description`, `fix/description`)
+2. Add appropriate labels to PRs (`feature`, `bug`, `breaking`, etc.)
+3. Merge PRs to `main` → Release Drafter automatically updates draft release
+4. Continue development → Draft accumulates all changes
 
-**What the release script does:**
+**For Releases:**
 
-1. **Pre-flight Checks**: Verifies clean git state, on main branch, no uncommitted changes
-2. **Version Updates**: Automatically updates version numbers in:
-   - Main plugin file (`pikari-accordion.php`) - Plugin header and version constant
-   - `package.json` and `composer.json`
-   - `CHANGELOG.md` - Converts [Unreleased] section to new version with date
-3. **Commit & Push**: Creates "Prepare release vX.X.X" commit to main branch
-4. **Build Wait**: Monitors GitHub Actions until `build` branch is updated with compiled assets
-5. **Tag Creation**: Creates git tag from `build` branch (which includes the plugin ZIP)
-6. **GitHub Release**: GitHub Actions automatically publishes the release with ZIP attachment
+1. Review the draft release at GitHub → Releases
+2. Edit version number if needed (auto-calculated from PR labels)
+3. Edit release notes if needed (auto-generated from PR titles)
+4. Click "Publish release" → GitHub Actions automatically builds and attaches ZIP
 
-**Prerequisites for "prepare a release" requests:**
+### Version Bumping Rules
 
-- All code must be committed (triggering pre-commit linting)
-- Working on main branch with clean git status
-- Valid semantic version number (e.g., 1.2.3)
-- `jq` command available for JSON manipulation
+Release Drafter automatically calculates version numbers based on PR labels:
 
-**Manual Release Checklist:**
+- **Major** (1.0.0 → 2.0.0): `breaking`, `breaking-change`
+- **Minor** (1.0.0 → 1.1.0): `feature`, `enhancement`
+- **Patch** (1.0.0 → 1.0.1): `bug`, `fix`, `docs`, `dependencies`, `chore`
 
-If the automated script fails, manually ensure:
+### Release Documentation
 
-- Version numbers updated in all files
-- CHANGELOG.md updated with new version and release date
-- Changes committed and pushed to main
-- GitHub Actions build workflow completes successfully
-- Tag created from build branch (not main branch)
+For complete release management information, see:
+
+- **[Release Management Guide](docs/releases.md)** - Comprehensive release documentation
+- **[Development Workflow](docs/development-workflow.md)** - Contributing and development process
+
+### Benefits of New System
+
+- ✅ **No manual version management** - Automatically calculated
+- ✅ **No complex scripts** - Simple GitHub UI
+- ✅ **No build branch complexity** - Clean, linear workflow
+- ✅ **Automatic changelog** - Generated from PR titles
+- ✅ **Always ready** - Draft release stays current
+- ✅ **Asset automation** - ZIP builds on release publish
 
 ## WordPress-Specific Guidelines
 

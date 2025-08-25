@@ -4,9 +4,9 @@ This directory contains the configuration files for testing the Pikari Accordion
 
 ## Files
 
--   `blueprint-local.json` - Configuration for local development testing
--   `blueprint.json` - Configuration for public demo (requires GitHub repository)
--   `demo-content.xml` - WordPress export file with demo accordion examples
+- `blueprint-local.json` - Configuration for local development testing
+- `blueprint.json` - Configuration for public demo (requires GitHub repository)
+- `demo-content.xml` - WordPress export file with demo accordion examples
 
 ## Local Development
 
@@ -31,10 +31,10 @@ The local playground opens directly to the page editor. To test the accordion:
 2. Each accordion comes with one item by default
 3. Click **Add Accordion Item** to add more items
 4. Configure settings in the block inspector:
-    - Icon style (chevron, plus/minus, arrow)
-    - Allow multiple expanded
-    - Enable animations
-    - Enable Schema.org (for FAQ variation)
+   - Icon style (chevron, plus/minus, arrow)
+   - Allow multiple expanded
+   - Enable animations
+   - Enable Schema.org (for FAQ variation)
 
 ### Example Patterns
 
@@ -63,7 +63,7 @@ npm run playground:demo
 
 This uses `blueprint.json` which:
 
-1. Downloads the plugin from the GitHub build branch
+1. Downloads the plugin from the GitHub repository
 2. Imports the demo-content.xml file
 3. Sets up a complete demo page automatically
 
@@ -71,19 +71,19 @@ This uses `blueprint.json` which:
 
 The `demo-content.xml` file includes:
 
--   Basic accordion examples
--   FAQ section with Schema.org
--   Different icon styles
--   Keyboard navigation test
--   Styled accordion with colors
--   Multiple configuration examples
+- Basic accordion examples
+- FAQ section with Schema.org
+- Different icon styles
+- Keyboard navigation test
+- Styled accordion with colors
+- Multiple configuration examples
 
 ## PHP Version
 
 The playground is configured to use PHP 8.3 as specified in:
 
--   Blueprint files: `"php": "8.3"`
--   NPM scripts: `--php=8.3`
+- Blueprint files: `"php": "8.3"`
+- NPM scripts: `--php=8.3`
 
 ## Troubleshooting
 
