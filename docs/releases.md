@@ -177,6 +177,10 @@ If no draft release exists:
 - Ensure PRs are being merged to `main` branch
 - Look at Actions tab for workflow failures
 
+### Version Management Note
+
+**Important**: Plugin PHP version numbers in the main plugin file are optional. Git tags are the authoritative source for version numbers. The release system automatically uses git tags for all distribution channels (GitHub releases, Composer packages, etc.).
+
 ### Wrong Version Number
 
 The auto-calculated version can be edited:
@@ -212,6 +216,13 @@ If checksums or ZIP files are missing:
 - Re-run the failed workflow from Actions tab
 - Check file permissions and path issues in workflow logs
 - Verify the release exists before workflow tries to upload
+
+### Workflow Re-runs
+
+**Important**: When re-running workflows, remember that GitHub Actions runs workflows from the commit being released (the tag commit), not from the current main branch. If you've fixed workflow issues after tagging:
+
+1. Either create a new release with a new tag
+2. Or use manual workflow dispatch from the main branch with the tag parameter
 
 ## Automation Features
 

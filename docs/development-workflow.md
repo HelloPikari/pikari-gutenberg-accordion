@@ -369,6 +369,23 @@ npm run playground
 # Access at http://localhost:8881
 ```
 
+### Local Workflow Testing
+
+For testing GitHub Actions workflows locally, development scripts are available in `local-dev/` (gitignored):
+
+```bash
+# Test the dist branch workflow locally
+./local-dev/test-dist-workflow.sh
+
+# Test GitHub Actions with act
+./local-dev/test-workflows.sh
+
+# Test specific workflow
+./local-dev/test-workflows.sh update-dist
+```
+
+These tools help validate complex workflows before pushing to GitHub.
+
 ## Performance Considerations
 
 ### Frontend Optimization

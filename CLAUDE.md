@@ -506,12 +506,26 @@ For complete release management information, see:
 
 ### Benefits of New System
 
-- ✅ **No manual version management** - Automatically calculated
+- ✅ **No manual version management** - Automatically calculated from git tags
 - ✅ **No complex scripts** - Simple GitHub UI
 - ✅ **No build branch complexity** - Clean, linear workflow
 - ✅ **Automatic changelog** - Generated from PR titles
 - ✅ **Always ready** - Draft release stays current
 - ✅ **Asset automation** - ZIP builds on release publish
+
+### Version Management Philosophy
+
+**Git tags are the authoritative source of version numbers** - not PHP file headers. Plugin PHP version numbers in the main plugin file are optional and for display purposes only. The release system uses git tags exclusively for version management, ensuring consistency across all distribution channels (GitHub releases, Composer installation, etc.)
+
+### Local Testing
+
+For development and testing of workflows, local testing scripts are available in the `local-dev/` directory (gitignored):
+
+- `local-dev/test-dist-workflow.sh` - Test the dist branch workflow locally
+- `local-dev/test-workflows.sh` - Test GitHub Actions workflows with act
+- `local-dev/events/` - Event JSON files for workflow testing
+
+These tools help validate workflows before pushing to GitHub.
 
 ## WordPress-Specific Guidelines
 
