@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+    xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+    <title>Pikari Gutenberg Accordion Demo</title>
+    <link>https://demo.local</link>
+    <description>Pikari Gutenberg Accordion Demo Site</description>
+    <language>en-US</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    
+    <item>
+        <title>Pikari Gutenberg Accordion - Feature Demo</title>
+        <link>https://demo.local/</link>
+        <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://demo.local/?page_id=2</guid>
+        <wp:post_id>2</wp:post_id>
+        <wp:post_date>2025-08-18 00:00:00</wp:post_date>
+        <wp:post_type>page</wp:post_type>
+        <wp:post_name>home</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:postmeta>
+            <wp:meta_key>_wp_page_template</wp:meta_key>
+            <wp:meta_value><![CDATA[default]]></wp:meta_value>
+        </wp:postmeta>
+        <content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Pikari Accordion Demo</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Welcome to the Pikari Accordion demo page. Below you'll find various examples showcasing all the features and capabilities of our accessible accordion block.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Basic Accordion</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is a simple accordion with default settings. Click on the questions to expand/collapse the answers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pikari-gutenberg-accordion/accordion {"allowMultipleExpanded":true,"iconStyle":"chevron"} -->
+<div class="wp-block-pikari-gutenberg-accordion" data-allow-multiple="true" data-icon-style="chevron" data-animations="true">
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">What is the Pikari Accordion block?</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>The Pikari Accordion is a fully accessible WordPress Gutenberg block that allows you to create collapsible content sections. It's perfect for FAQs, documentation, product features, or any content that benefits from a show/hide interface.</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:list -->
+            <ul class="wp-block-list">
+            <li>Built with accessibility in mind</li>
+            <li>Supports keyboard navigation</li>
+            <li>Includes ARIA attributes</li>
+            <li>Mobile responsive</li>
+            </ul>
+            <!-- /wp:list -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+    
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">How do I customize the accordion?</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>The accordion can be customized in multiple ways:</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:paragraph -->
+            <p><strong>Block Settings:</strong> Use the block inspector to change icon styles, animation settings, and behavior options.</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:paragraph -->
+            <p><strong>CSS Variables:</strong> Theme developers can use CSS custom properties to adjust colors, spacing, and animations.</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:paragraph -->
+            <p><strong>PHP/JS Hooks:</strong> Developers can use filters to customize icons and modify functionality.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+    
+    <!-- wp:pikari-gutenberg-accordion/accordion-item {"isInitiallyExpanded":true} -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="true">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">This item starts expanded</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>This accordion item is configured to be initially expanded when the page loads. This is useful when you want to highlight important information or ensure certain content is immediately visible to visitors.</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:image -->
+            <figure class="wp-block-image"><img src="https://via.placeholder.com/600x300/007cba/ffffff?text=Accordion+Content" alt="Example image in accordion"/></figure>
+            <!-- /wp:image -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+</div>
+<!-- /wp:pikari-gutenberg-accordion/accordion -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQ Section with Schema.org</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This FAQ accordion includes Schema.org structured data for better SEO. Only one item can be open at a time.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pikari-gutenberg-accordion/accordion {"className":"is-style-faq","enableSchema":true,"allowMultipleExpanded":false,"iconStyle":"plus-minus"} -->
+<div class="wp-block-pikari-gutenberg-accordion is-style-faq" data-allow-multiple="false" data-icon-style="plus-minus" data-animations="true">
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">Is the Pikari Accordion accessible?</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>Yes! The Pikari Accordion is built with accessibility as a top priority. It includes:</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:list -->
+            <ul class="wp-block-list">
+            <li>Proper ARIA attributes (aria-expanded, aria-controls, aria-labelledby)</li>
+            <li>Keyboard navigation support (Enter and Space keys)</li>
+            <li>Screen reader compatibility</li>
+            <li>Focus management with visible indicators</li>
+            <li>Semantic HTML structure</li>
+            <li>Respects prefers-reduced-motion settings</li>
+            </ul>
+            <!-- /wp:list -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+    
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">What browsers are supported?</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>The Pikari Accordion supports all modern browsers including:</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:list -->
+            <ul class="wp-block-list">
+            <li>Chrome (latest)</li>
+            <li>Firefox (latest)</li>
+            <li>Safari (latest)</li>
+            <li>Edge (latest)</li>
+            <li>Mobile browsers (iOS Safari, Chrome Mobile)</li>
+            </ul>
+            <!-- /wp:list -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+    
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">Can I use custom icons?</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>Absolutely! You can customize icons in several ways:</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:list {"ordered":true} -->
+            <ol class="wp-block-list">
+            <li>Choose from built-in icon styles (chevron, plus/minus, arrow)</li>
+            <li>Use the PHP filter 'pikari_gutenberg_accordion_icon_html' to provide custom SVG</li>
+            <li>Use the JavaScript filter 'pikari.accordion.iconHTML' for dynamic changes</li>
+            <li>Override with CSS using the --pikari-gutenberg-accordion-icon-color variable</li>
+            </ol>
+            <!-- /wp:list -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+</div>
+<!-- /wp:pikari-gutenberg-accordion/accordion -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Arrow Icon Style</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This accordion uses arrow icons and has animations disabled for a simpler experience.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pikari-gutenberg-accordion/accordion {"iconStyle":"arrow","enableAnimations":false} -->
+<div class="wp-block-pikari-gutenberg-accordion" data-allow-multiple="true" data-icon-style="arrow" data-animations="false">
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">Product Features</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:columns -->
+            <div class="wp-block-columns">
+            <!-- wp:column -->
+            <div class="wp-block-column">
+                <!-- wp:heading {"level":4} -->
+                <h4 class="wp-block-heading">Performance</h4>
+                <!-- /wp:heading -->
+                
+                <!-- wp:paragraph -->
+                <p>Lightweight vanilla JavaScript with no jQuery dependency ensures fast loading times.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:column -->
+            
+            <!-- wp:column -->
+            <div class="wp-block-column">
+                <!-- wp:heading {"level":4} -->
+                <h4 class="wp-block-heading">Flexibility</h4>
+                <!-- /wp:heading -->
+                
+                <!-- wp:paragraph -->
+                <p>Use any blocks inside the accordion content area for maximum flexibility.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+    
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">Technical Specifications</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:table -->
+            <figure class="wp-block-table"><table class="has-fixed-layout"><tbody>
+            <tr><td><strong>WordPress Version</strong></td><td>6.0+</td></tr>
+            <tr><td><strong>PHP Version</strong></td><td>8.2+</td></tr>
+            <tr><td><strong>License</strong></td><td>GPL-2.0-or-later</td></tr>
+            <tr><td><strong>Block API Version</strong></td><td>3</td></tr>
+            </tbody></table></figure>
+            <!-- /wp:table -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+</div>
+<!-- /wp:pikari-gutenberg-accordion/accordion -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Styled Accordion with Colors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This accordion demonstrates the use of block supports for custom colors and spacing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pikari-gutenberg-accordion/accordion {"backgroundColor":"pale-cyan-blue","textColor":"vivid-cyan-blue","style":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"},"blockGap":"10px"},"border":{"width":"2px","style":"solid","color":"#007cba","radius":"8px"}}} -->
+<div class="wp-block-pikari-gutenberg-accordion has-vivid-cyan-blue-color has-pale-cyan-blue-background-color has-text-color has-background" style="border-style:solid;border-width:2px;border-color:#007cba;border-radius:8px;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px" data-allow-multiple="true" data-icon-style="chevron" data-animations="true">
+    <!-- wp:pikari-gutenberg-accordion/accordion-item {"backgroundColor":"white","style":{"spacing":{"padding":{"top":"15px","right":"15px","bottom":"15px","left":"15px"}},"border":{"radius":"4px"}}} -->
+    <div class="wp-block-pikari-gutenberg-accordion-item has-white-background-color has-background" style="border-radius:4px;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">Styled Item 1</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>This accordion has custom background colors, text colors, padding, and border radius applied using the block editor's style controls.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+    
+    <!-- wp:pikari-gutenberg-accordion/accordion-item {"backgroundColor":"white","style":{"spacing":{"padding":{"top":"15px","right":"15px","bottom":"15px","left":"15px"}},"border":{"radius":"4px"}}} -->
+    <div class="wp-block-pikari-gutenberg-accordion-item has-white-background-color has-background" style="border-radius:4px;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">Styled Item 2</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>The styling is applied using WordPress's native block supports, ensuring compatibility with theme.json and Global Styles.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+</div>
+<!-- /wp:pikari-gutenberg-accordion/accordion -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Testing Keyboard Navigation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Try navigating this accordion using only your keyboard. Use Tab to focus on items, then Enter or Space to expand/collapse.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pikari-gutenberg-accordion/accordion -->
+<div class="wp-block-pikari-gutenberg-accordion" data-allow-multiple="true" data-icon-style="chevron" data-animations="true">
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">Press Tab to focus here</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>Great! You've focused on this accordion item. Now press Enter or Space to toggle it.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+    
+    <!-- wp:pikari-gutenberg-accordion/accordion-item -->
+    <div class="wp-block-pikari-gutenberg-accordion-item" data-expanded="false">
+        <!-- wp:heading {"level":3,"className":"pikari-gutenberg-accordion-heading"} -->
+        <h3 class="wp-block-heading pikari-gutenberg-accordion-heading">Tab again to reach this item</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:group {"className":"pikari-gutenberg-accordion-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group pikari-gutenberg-accordion-content">
+            <!-- wp:paragraph -->
+            <p>Perfect! Keyboard navigation is working correctly. This ensures the accordion is accessible to all users.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:pikari-gutenberg-accordion/accordion-item -->
+</div>
+<!-- /wp:pikari-gutenberg-accordion/accordion -->]]></content:encoded>
+    </item>
+</channel>
+</rss>

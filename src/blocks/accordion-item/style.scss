@@ -1,0 +1,221 @@
+/**
+ * Accordion item styles
+ */
+.wp-block-pikari-gutenberg-accordion-item {
+	// Ensure accordion items take full width of their container
+	width: 100%;
+	max-width: none;
+	margin-left: 0;
+	margin-right: 0;
+	// Heading styles with pseudo element icons
+	.wp-block-heading,
+	.wp-block-post-title {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		color: inherit;
+		// Theme customizable properties
+		font-size: var(--pikari-accordion-heading-font-size, inherit);
+		font-weight: var(--pikari-accordion-heading-font-weight, inherit);
+		padding: var(--pikari-accordion-heading-padding, 0);
+		&:hover {
+			opacity: var(--pikari-gutenberg-accordion-hover-opacity, 0.8);
+		}
+		&:focus-visible {
+			outline: 2px solid var(--wp--preset--color--primary, #007cba);
+			outline-offset: 2px;
+		}
+		&::after,
+		&::before {
+			flex-shrink: 0;
+		}
+
+		// Right position icon (default)
+		&::after {
+			content: "";
+			display: inline-block;
+			width: var(--pikari-gutenberg-accordion-icon-size, 1.25em);
+			height: var(--pikari-gutenberg-accordion-icon-size, 1.25em);
+			margin-left: var(--pikari-gutenberg-accordion-icon-space, 0.5em);
+			background-color: currentColor;
+			mask-size: contain;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			transition: transform
+				var(--pikari-gutenberg-accordion-transition-duration, 0.3s)
+				var(--pikari-gutenberg-accordion-transition-easing, ease-in-out);
+		}
+	}
+	&[data-icon-position="right"] .wp-block-heading,
+	&[data-icon-position="right"] .wp-block-post-title {
+		justify-content: space-between;
+	}
+
+	// Left position icon
+	&[data-icon-position="left"] .wp-block-heading,
+	&[data-icon-position="left"] .wp-block-post-title {
+		&::after {
+			display: none;
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			width: var(--pikari-gutenberg-accordion-icon-size, 1.25em);
+			height: var(--pikari-gutenberg-accordion-icon-size, 1.25em);
+			background-color: currentColor;
+			margin-right: var(--pikari-gutenberg-accordion-icon-space, 0.5em);
+			mask-size: contain;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			transition: transform
+				var(--pikari-gutenberg-accordion-transition-duration, 0.3s)
+				var(--pikari-gutenberg-accordion-transition-easing, ease-in-out);
+		}
+	}
+
+	// Icon styles using CSS custom properties to avoid linting issues with data URIs
+	&[data-icon-style="chevron"] {
+		--pikari-gutenberg-accordion-chevron-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7 10l5 5 5-5' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		.wp-block-heading,
+		.wp-block-post-title {
+			&::after,
+			&::before {
+				mask-image: var(--pikari-gutenberg-accordion-chevron-icon);
+			}
+		}
+	}
+	&[data-icon-style="arrow"] {
+		--pikari-gutenberg-accordion-arrow-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 18l6-6-6-6' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		.wp-block-heading,
+		.wp-block-post-title {
+			&::after,
+			&::before {
+				mask-image: var(--pikari-gutenberg-accordion-arrow-icon);
+			}
+		}
+	}
+	&[data-icon-style="plus-minus"] {
+		--pikari-gutenberg-accordion-plus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 5v14M5 12h14' stroke='currentColor' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+		--pikari-gutenberg-accordion-minus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h14' stroke='currentColor' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+		.wp-block-heading,
+		.wp-block-post-title {
+			&::after,
+			&::before {
+				mask-image: var(--pikari-gutenberg-accordion-plus-icon);
+			}
+		}
+	}
+
+	// Rotation for expanded state
+	&.is-expanded {
+		&[data-icon-style="chevron"] .wp-block-heading::after,
+		&[data-icon-style="chevron"] .wp-block-heading::before,
+		&[data-icon-style="chevron"] .wp-block-post-title::after,
+		&[data-icon-style="chevron"] .wp-block-post-title::before {
+			transform: rotate(180deg);
+		}
+		&[data-icon-style="arrow"] .wp-block-heading::after,
+		&[data-icon-style="arrow"] .wp-block-heading::before,
+		&[data-icon-style="arrow"] .wp-block-post-title::after,
+		&[data-icon-style="arrow"] .wp-block-post-title::before {
+			transform: rotate(90deg);
+		}
+		&[data-icon-style="plus-minus"] .wp-block-heading::after,
+		&[data-icon-style="plus-minus"] .wp-block-heading::before,
+		&[data-icon-style="plus-minus"] .wp-block-post-title::after,
+		&[data-icon-style="plus-minus"] .wp-block-post-title::before {
+			mask-image: var(--pikari-gutenberg-accordion-minus-icon);
+		}
+	}
+
+	// Hide icons when iconStyle is none
+	&[data-icon-style="none"] .wp-block-heading,
+	&[data-icon-style="none"] .wp-block-post-title {
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+
+	// Content area styles
+	.pikari-gutenberg-accordion-content,
+	.wp-block-group {
+		// Theme customizable properties for content area
+		padding: var(--pikari-accordion-content-padding, 0);
+		background: var(--pikari-accordion-content-background, transparent);
+		border-radius: var(--pikari-accordion-content-border-radius, 0);
+		border: var(--pikari-accordion-content-border, none);
+		&[role="region"] {
+			&[hidden] {
+				display: none;
+			}
+		}
+	}
+
+	// Animation styles
+	&.has-animation {
+		.pikari-gutenberg-accordion-content,
+		.wp-block-group {
+			&[role="region"] {
+				overflow: hidden;
+				transition: max-height
+					var(--pikari-gutenberg-accordion-transition-duration, 0.3s)
+					var(--pikari-gutenberg-accordion-transition-easing, ease-in-out);
+				&[hidden] {
+					max-height: 0;
+					display: block !important;
+					visibility: hidden;
+					transition:
+						max-height
+							var(--pikari-gutenberg-accordion-transition-duration, 0.3s)
+							var(--pikari-gutenberg-accordion-transition-easing, ease-in-out),
+						visibility 0s
+							var(--pikari-gutenberg-accordion-transition-duration, 0.3s);
+				}
+				&:not([hidden]) {
+					max-height: 2000px; // Large enough for most content
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	// Respect reduced motion preference
+	@media (prefers-reduced-motion: reduce) {
+		.wp-block-heading,
+		.wp-block-post-title {
+			&::after,
+			&::before {
+				transition: none;
+			}
+		}
+		&.has-animation {
+			.pikari-gutenberg-accordion-content,
+			.wp-block-group {
+				&[role="region"] {
+					transition: none;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Block variation styles
+ * These provide theme-friendly styling hooks
+ */
+
+// Accordion Heading variation
+.is-style-accordion-heading.pikari-gutenberg-accordion-heading {
+	// Additional theme customizable properties
+	color: var(--pikari-accordion-heading-color, inherit);
+	text-decoration: var(--pikari-accordion-heading-text-decoration, none);
+	transition: var(--pikari-accordion-heading-transition, all 0.2s ease);
+}
+
+// Accordion Content variation
+.is-style-accordion-content.pikari-gutenberg-accordion-content {
+	// Additional theme customizable properties
+	margin: var(--pikari-accordion-content-margin, 0);
+	box-shadow: var(--pikari-accordion-content-box-shadow, none);
+}

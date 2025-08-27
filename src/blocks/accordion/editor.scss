@@ -1,0 +1,42 @@
+/**
+ * Editor-specific styles for accordion block
+ */
+.wp-block-pikari-gutenberg-accordion {
+	// Visual feedback in editor
+	.wp-block-pikari-gutenberg-accordion-item {
+		cursor: pointer;
+		position: relative;
+		margin-bottom: 8px;
+
+		// Indicate clickability on hover
+		&:hover {
+			.wp-block-heading {
+				opacity: var(--pikari-gutenberg-accordion-hover-opacity, 0.8);
+			}
+		}
+		// Expanded state - clear visual feedback
+		&.is-expanded {
+			.pikari-gutenberg-accordion-content {
+				display: block;
+			}
+		}
+
+		// Collapsed state - different visual treatment
+		&:not(.is-expanded) {
+			.pikari-gutenberg-accordion-content {
+				// Hide content completely when collapsed for cleaner design UX
+				display: none;
+			}
+		}
+
+		// When user selects the accordion item or any of its descendants, show content
+		&:not(.is-expanded).is-selected,
+		&:not(.is-expanded).has-child-selected,
+		&:not(.is-expanded).is-multi-selected {
+			.pikari-gutenberg-accordion-content {
+				// Show content when accordion item or its children are selected
+				display: block;
+			}
+		}
+	}
+}

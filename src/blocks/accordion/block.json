@@ -1,0 +1,76 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pikari-gutenberg-accordion/accordion",
+	"version": "0.1.0",
+	"title": "Accordion",
+	"category": "design",
+	"icon": "list-view",
+	"description": "A collapsible accordion block for organizing content.",
+	"keywords": ["accordion", "toggle", "collapse", "faq", "expand"],
+	"textdomain": "pikari-gutenberg-accordion",
+	"supports": {
+		"anchor": true,
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true,
+			"link": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		},
+		"layout": {
+			"default": {
+				"type": "constrained"
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
+		"html": false
+	},
+	"attributes": {
+		"enableAnimations": {
+			"type": "boolean",
+			"default": true
+		},
+		"enableSchema": {
+			"type": "boolean",
+			"default": false
+		},
+		"schemaType": {
+			"type": "string",
+			"default": "FAQPage"
+		},
+		"iconStyle": {
+			"type": "string",
+			"default": "chevron"
+		},
+		"iconPosition": {
+			"type": "string",
+			"default": "right",
+			"enum": ["left", "right"]
+		},
+		"allowMultipleExpanded": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"providesContext": {
+		"pikari-gutenberg-accordion/enableAnimations": "enableAnimations",
+		"pikari-gutenberg-accordion/iconStyle": "iconStyle",
+		"pikari-gutenberg-accordion/iconPosition": "iconPosition",
+		"pikari-gutenberg-accordion/allowMultipleExpanded": "allowMultipleExpanded"
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
