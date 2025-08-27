@@ -49,14 +49,15 @@ jobs:
       - name: Update dist branch
         env:
           VERSION: ${{ github.event.release.tag_name || inputs.tag }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Configure git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Clone to separate directory (avoids ALL checkout conflicts)
+          # Clone to separate directory WITH AUTHENTICATION
           echo "📦 Cloning repository to temp directory..."
-          git clone https://github.com/${{ github.repository }}.git /tmp/dist-repo
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git /tmp/dist-repo
           cd /tmp/dist-repo
           
           # Fetch or create dist branch
