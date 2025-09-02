@@ -32,9 +32,8 @@ yarn-error.log*
 wp-content/
 wp-config.php
 
-# Testing/Development scripts (local only)
-/scripts/
-/test/
+# Local development and testing (local only)
+/local-dev/
 coverage/
 .nyc_output/
 .phpunit.result.cache

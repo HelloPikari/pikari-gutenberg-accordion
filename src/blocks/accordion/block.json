@@ -4,7 +4,7 @@
 	"name": "pikari-gutenberg-accordion/accordion",
 	"version": "0.1.0",
 	"title": "Accordion",
-	"category": "design",
+	"category": "pikari, design",
 	"icon": "list-view",
 	"description": "A collapsible accordion block for organizing content.",
 	"keywords": ["accordion", "toggle", "collapse", "faq", "expand"],
