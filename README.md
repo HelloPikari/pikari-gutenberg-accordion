@@ -292,3 +292,4 @@ This project uses automated release management:
 4. **Distribution** → ZIP file automatically built and attached
 
 For detailed information, see our [Release Management Guide](docs/releases.md).
+<!-- Updated: Wed Aug 27 11:17:32 EDT 2025 -->

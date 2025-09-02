@@ -3,7 +3,7 @@
  * Plugin Name: Pikari Gutenberg Accordion
  * Plugin URI:  https://pikari.io
  * Description: A Wordpress Gutenberg Accordion/Toggle block
- * Version: 1.0.0
+ * Version: 1.0.2
  * Author:      Pikari Inc.
  * Author URI:  https://pikari.io
  * License:     GPL-2.0-or-later
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin version.
  */
-define( 'PIKARI_GUTENBERG_ACCORDION_VERSION', '1.0.0' );
+define( 'PIKARI_GUTENBERG_ACCORDION_VERSION', '1.0.2' );
 
 /**
  * Plugin directory path.
