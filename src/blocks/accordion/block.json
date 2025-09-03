@@ -24,7 +24,8 @@
 		},
 		"layout": {
 			"default": {
-				"type": "constrained"
+				"type": "constrained",
+				"justifyContent": "left"
 			}
 		},
 		"__experimentalBorder": {
