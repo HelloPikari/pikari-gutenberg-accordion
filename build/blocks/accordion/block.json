@@ -4,7 +4,7 @@
   "name": "pikari-gutenberg-accordion/accordion",
   "version": "0.1.0",
   "title": "Accordion",
-  "category": "pikari, design",
+  "category": "design",
   "icon": "list-view",
   "description": "A collapsible accordion block for organizing content.",
   "keywords": [
@@ -33,7 +33,8 @@
     },
     "layout": {
       "default": {
-        "type": "constrained"
+        "type": "constrained",
+        "justifyContent": "left"
       }
     },
     "__experimentalBorder": {
