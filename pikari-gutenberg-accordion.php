@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin version.
  */
-define( 'PIKARI_GUTENBERG_ACCORDION_VERSION', '1.0.2' );
+define( 'PIKARI_GUTENBERG_ACCORDION_VERSION', '1.0.6' );
 
 /**
  * Plugin directory path.
