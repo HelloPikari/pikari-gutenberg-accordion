@@ -50,11 +50,22 @@ add_action( 'init', 'pikari_gutenberg_accordion_init' );
  * Register Gutenberg blocks.
  */
 function pikari_gutenberg_accordion_register_blocks() {
-    // Register accordion container block.
-    register_block_type( __DIR__ . '/build/blocks/accordion' );
+    $build_dir = __DIR__ . '/build/blocks';
 
-    // Register accordion item block.
-    register_block_type( __DIR__ . '/build/blocks/accordion-item' );
+    if ( ! file_exists( $build_dir ) ) {
+        return;
+    }
+
+    $block_json_files = glob( $build_dir . '/*/block.json' );
+
+    foreach ( $block_json_files as $block_json_file ) {
+        register_block_type( dirname( $block_json_file ) );
+    }
+    // // Register accordion container block.
+    // register_block_type( __DIR__ . '/build/blocks/accordion' );
+
+    // // Register accordion item block.
+    // register_block_type( __DIR__ . '/build/blocks/accordion-item' );
 }
 
 /**
