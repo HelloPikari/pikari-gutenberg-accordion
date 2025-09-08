@@ -2,6 +2,10 @@
  * Editor-specific styles for accordion block
  */
 .wp-block-pikari-gutenberg-accordion {
+	.pikari-gutenberg-accordion-heading.is-highlighted::after {
+		position: relative;
+	}
+
 	// Visual feedback in editor
 	.wp-block-pikari-gutenberg-accordion-item {
 		cursor: pointer;
