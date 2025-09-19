@@ -34,6 +34,9 @@
 			"style": true,
 			"width": true
 		},
+		"interactivity": {
+			"clientNavigation": true
+		},
 		"html": false
 	},
 	"attributes": {
