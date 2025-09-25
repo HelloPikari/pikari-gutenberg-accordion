@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **BREAKING**: Migrated from custom JavaScript to WordPress Interactivity API
+- Accordion-item blocks now use server-side rendering for better integration
+- Frontend interactions now handled through WordPress Interactivity API actions and state management
+- Improved performance and reliability with native WordPress reactivity system
+
+### Technical
+
+- Added `view.js` with WordPress Interactivity API store implementation
+- Updated `accordion-item/render.php` for server-side rendering
+- Removed legacy custom JavaScript implementation
+- Enhanced state management with proper context inheritance
+- Manual DOM updates for visual state (class binding compatibility)
+
 ## [1.0.0] - 2025-01-XX
 
 ### Added

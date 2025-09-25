@@ -19,12 +19,25 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @return string The rendered block HTML.
  */
+// Context data for the Interactivity API.
+$accordion_context = array(
+    'allowMultipleExpanded' => $attributes['allowMultipleExpanded'],
+    'iconStyle'             => $attributes['iconStyle'],
+    'iconPosition'          => $attributes['iconPosition'],
+    'enableAnimations'      => $attributes['enableAnimations'],
+    'expandedItems'         => (object) array(), // Empty object, not array
+);
+
 $wrapper_attributes = get_block_wrapper_attributes(
     array(
-        'data-allow-multiple'  => $attributes['allowMultipleExpanded'] ? 'true' : 'false',
-        'data-icon-style'      => $attributes['iconStyle'],
-        'data-icon-position'   => $attributes['iconPosition'],
-        'data-animations'      => $attributes['enableAnimations'] ? 'true' : 'false',
+        'data-wp-interactive' => 'pikari/accordion',
+        'data-wp-context'     => wp_json_encode( $accordion_context ),
+        'data-wp-init'        => 'callbacks.init',
+        // Keep existing data attributes for backward compatibility.
+        'data-allow-multiple' => $attributes['allowMultipleExpanded'] ? 'true' : 'false',
+        'data-icon-style'     => $attributes['iconStyle'],
+        'data-icon-position'  => $attributes['iconPosition'],
+        'data-animations'     => $attributes['enableAnimations'] ? 'true' : 'false',
     )
 );
 

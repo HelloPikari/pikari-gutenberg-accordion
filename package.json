@@ -9,8 +9,8 @@
 		"plugin"
 	],
 	"scripts": {
-		"start": "wp-scripts start",
-		"build": "wp-scripts build",
+		"start": "wp-scripts start --experimental-modules",
+		"build": "wp-scripts build --experimental-modules",
 		"lint:all": "npm run lint:js && npm run lint:css && npm run lint:php",
 		"lint:fix": "npm run lint:js:fix && npm run lint:css:fix && npm run lint:php:fix",
 		"lint:js": "wp-scripts lint-js src",
