@@ -162,10 +162,9 @@ Note: Prettier is configured to ignore JavaScript files. ESLint handles all Java
 ### Project Structure
 
 - `pikari-gutenberg-accordion.php` - Main plugin file with WordPress headers, block registration, and schema functionality
-- `src/blocks/accordion/` - Parent accordion container block (edit.js, save.js, render.php, styles)
-- `src/blocks/accordion-item/` - Child accordion item block (edit.js, save.js, styles)
+- `src/blocks/accordion/` - Parent accordion container block (edit.js, save.js, render.php, view.js for Interactivity API, styles)
+- `src/blocks/accordion-item/` - Child accordion item block (edit.js, save.js, render.php for server-side rendering, styles)
 - `src/components/icons.js` - Reusable icon components for accordion expand/collapse indicators
-- `src/frontend/accordion.js` - Frontend JavaScript for accordion interactions and accessibility
 - `build/` - Compiled assets (gitignored, created by wp-scripts build process)
 - `languages/` - Translation files for internationalization
 - `_playground/` - WordPress Playground configuration for local development
@@ -174,10 +173,19 @@ Note: Prettier is configured to ignore JavaScript files. ESLint handles all Java
 
 - **Parent-Child Relationship**: Accordion uses `providesContext` and accordion-item uses `usesContext` for settings inheritance
 - **Block Registration**: Both blocks registered via `register_block_type()` with `build/blocks/` directory structure
-- **Frontend Rendering**: Accordion block uses `render.php` for server-side rendering with schema support
+- **Server-Side Rendering**: Both blocks use `render.php` for dynamic rendering with WordPress Interactivity API integration
 - **Context Passing**: Settings like `iconStyle`, `iconPosition`, `allowMultipleExpanded` flow from parent to children
-- **Accessibility Implementation**: Frontend JavaScript in `accordion.js` adds proper ARIA attributes and keyboard handling
+- **Interactivity API Implementation**: Frontend interactions handled via WordPress Interactivity API (`view.js`) with reactive state management
+- **Accessibility Implementation**: Proper ARIA attributes, keyboard handling, and semantic HTML structure maintained
 - **Schema Generation**: `pikari_gutenberg_accordion_extract_schema_data()` function parses block content for FAQ schema
+
+### WordPress Interactivity API Integration
+
+- **State Management**: Accordion expansion state managed in context with reactive updates
+- **Event Handling**: Click and keyboard events processed through Interactivity API actions
+- **Visual Updates**: Manual DOM manipulation for class and attribute updates (class binding had context issues)
+- **Server-Side Context**: Accordion context initialized in `render.php` and inherited by child accordion-item blocks
+- **ES Module Architecture**: Uses `viewScriptModule` for modern JavaScript loading and execution
 
 ### Key WordPress Patterns
 

@@ -1,32 +1,14 @@
 /**
  * WordPress dependencies
  */
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks } from '@wordpress/block-editor';
 
 /**
- * Save component
+ * Save component for accordion item block.
  *
- * @param {Object} root0            - Component props.
- * @param {Object} root0.attributes - Block attributes.
- * @param {Object} root0.context    - Block context from parent.
+ * Since this block uses server-side rendering (render.php),
+ * the save function returns null to indicate dynamic rendering.
  */
-export default function save( { attributes, context = {} } ) {
-    const { isInitiallyExpanded } = attributes;
-    
-    // Get icon settings from parent accordion block context
-    const iconStyle = context['pikari-gutenberg-accordion/iconStyle'] || 'chevron';
-    const iconPosition = context['pikari-gutenberg-accordion/iconPosition'] || 'right';
-
-    const blockProps = useBlockProps.save( {
-        className: 'wp-block-pikari-gutenberg-accordion-item',
-        'data-expanded': isInitiallyExpanded,
-        'data-icon-style': iconStyle,
-        'data-icon-position': iconPosition,
-    } );
-
-    return (
-        <div { ...blockProps }>
-            <InnerBlocks.Content />
-        </div>
-    );
+export default function save() {
+	return <InnerBlocks.Content />;
 }
